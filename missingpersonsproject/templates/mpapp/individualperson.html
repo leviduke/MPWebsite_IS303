@@ -11,12 +11,30 @@
 </head>
 
 <body>
-
-<p>
-    
-</p>
-
-
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}       
+        <h4>Student Information:</h4>
+        <table>
+            <tr>
+                <th >Last Name</th>
+                <th >First Name</th>
+                <th >GPA</th>
+                <th >Age</th>  
+                <th ></th>              
+            </tr>            
+            {% for oStudent in data %}
+            <tr>            
+                <td >{{ oStudent.last_name }}</td>
+                <td >{{ oStudent.first_name }}</td>
+                <td >{{ oStudent.gpa }}</td>
+                <td >{{ oStudent.age }}</td>       
+                <td ><a href="{% url 'displayStudent' id=oStudent.id 
+%}">Details</a></td>                                         
+            </tr>
+            {% endfor %} 
+            </table>
+        {% endblock %}
 
 </body>
 
