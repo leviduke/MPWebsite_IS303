@@ -4,9 +4,9 @@ from .views import indexPageView, missingpersonstable.html,
 individualpersonpageview
 
 urlpatterns = [  
-    path("showPerson/", showStudentsPageView, 
-name="showStudents"), 
-    path("<str:sName>/", displayPageView, name="displayScreen"), 
+    path("individualperson/", individualpersonPageView, 
+name="idnividualperson"), 
+    path("<str:oPerson>/", missingpersonPageView, name="mptable"), 
     path("", indexPageView, name="index"),
 ] 
 
