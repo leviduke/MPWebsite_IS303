@@ -17,20 +17,28 @@
         <h4>Student Information:</h4>
         <table>
             <tr>
-                <th >Last Name</th>
-                <th >First Name</th>
-                <th >GPA</th>
-                <th >Age</th>  
-                <th ></th>              
+                   <th title="Field #1">Date Missing</th>
+                   <th title="Field #2">Last Name</th>
+                   <th title="Field #3">First Name</th>
+                   <th title="Field #4">Age when Missing</th>
+                   <th title="Field #5">City</th>
+                   <th title="Field #6">State</th>
+                   <th title="Field #7">Gender</th>
+                   <th title="Field #8">Race</th>      
             </tr>            
-            {% for oStudent in data %}
+            {% for oPerson in data %}
             <tr>            
-                <td >{{ oStudent.last_name }}</td>
-                <td >{{ oStudent.first_name }}</td>
-                <td >{{ oStudent.gpa }}</td>
-                <td >{{ oStudent.age }}</td>       
-                <td ><a href="{% url 'displayStudent' id=oStudent.id 
-%}">Details</a></td>                                         
+                <td>{{ oPerson.date_missing }}</td>
+                <td>{{ oPerson.last_name }}</td>
+                <td>{{ oPerson.first_name }}</td>
+                <td align="right">{{ oPerson.age_when_missing }}</td>
+                <td>{{ oPerson.city }}</td>
+                <td>{{ oPerson.state }}</td>
+                <td>{{ oPerson.gender }}</td>
+                <td>{{ oPerson.race }}</td>
+                <td ><a href="{% url 'displayPerson' id=oPerson.id 
+%}">Details</a></td>   
+                                         
             </tr>
             {% endfor %} 
             </table>
