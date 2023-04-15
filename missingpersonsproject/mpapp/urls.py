@@ -7,6 +7,13 @@ from django.urls import path
 from .views import individualpersonPageView
 from .views import missingpersonstablePageView
 
+urlpatterns = [  
+    path("<int:id>/", displayStudentPageView, 
+name="displayStudent"), 
+    path("showStudents/", showStudentsPageView, name="showStudents"), 
+    path("<str:sName>/", displayPageView, name="displayScreen"), 
+    path("", indexPageView, name="index"),
+] 
 
 urlpatterns = [
     path("",indexPageView, name="index"),
