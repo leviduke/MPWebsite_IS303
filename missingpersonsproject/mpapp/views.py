@@ -18,6 +18,14 @@ def individualpersonPageView(request):
     return render(request, 'mpapp/individualperson.html', context)
 
 
+def displayPersonPageView(request, id) :
+    oPerson = Student.objects.get(id=id)   
+    context = {
+            "data" : student
+    }
+    return render(request, 'travelpages/displayStudent.html', context)
+
+
 =======
     return render(request, 'mpapp/index.html')
 >>>>>>> origin/master
