@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+        <p>Welcome to the course</p>
+        <form>
+            <label>First Name</label>
+            <input type="text" value="{{data.first_name}}">
+            <br>
+            <label>Last Name</label>
+            <input type="text" value="{{data.last_name}}">            
+        </form>    
+{% endblock %}
