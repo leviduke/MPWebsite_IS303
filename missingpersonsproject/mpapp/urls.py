@@ -8,10 +8,10 @@ from .views import individualpersonPageView
 from .views import missingpersonstablePageView
 
 urlpatterns = [  
-    path("<int:id>/", displayStudentPageView, 
-name="displayStudent"), 
-    path("showStudents/", showStudentsPageView, name="showStudents"), 
-    path("<str:sName>/", displayPageView, name="displayScreen"), 
+    path("<int:id>/", individualpersonPageView, 
+name="individualperson"), 
+    path("missingpersonstable/", missingpersonstablePageView, name="missingpersonstable"), 
+    path("<str:oPerson>/", individualpersonPageView, name="individualperson"), 
     path("", indexPageView, name="index"),
 ] 
 
