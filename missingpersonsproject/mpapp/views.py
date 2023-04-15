@@ -15,7 +15,7 @@ def individualpersonPageView(request):
             "data" : db_person
     }
 
-    return render(request, 'mpapp/individualperson.html')
+    return render(request, 'mpapp/individualperson.html', context)
 
 
 =======
