@@ -6,6 +6,9 @@ from django.urls import path
 <<<<<<< HEAD
 from .views import individualpersonPageView
 from .views import missingpersonstablePageView
+from .views import displayPersonPageView
+
+
 
 urlpatterns = [  
     path("<int:id>/", individualpersonPageView, 
