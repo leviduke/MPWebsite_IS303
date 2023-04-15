@@ -10,7 +10,14 @@ def missingpersonstablePageView(request):
     return render(request, 'mpapp/missingpersonstable.html')
 
 def individualpersonPageView(request):
+   db_person = Person.objects.all() 
+    context = {
+            "data" : db_person
+    }
+
     return render(request, 'mpapp/individualperson.html')
+
+
 =======
     return render(request, 'mpapp/index.html')
 >>>>>>> origin/master
