@@ -10,14 +10,14 @@ from .views import missingpersonstablePageView
 urlpatterns = [  
     path("<int:id>/", individualpersonPageView, 
 name="individualperson"), 
-    path("missingpersonstable/", missingpersonstablePageView, name="missingpersonstable"), 
+    path("missingpersonstable/", missingpersonstablePageView, name="mptable"), 
     path("<str:oPerson>/", individualpersonPageView, name="individualperson"), 
     path("", indexPageView, name="index"),
 ] 
 
 urlpatterns = [
     path("",indexPageView, name="index"),
-    path("mptable/", missingpersonstablePageView, name="mptable"  ),
+    path("missingpersonstable/", missingpersonstablePageView, name="mptable"  ),
     path("individualperson/", individualpersonPageView, name = "individualperson"),
 =======
 
