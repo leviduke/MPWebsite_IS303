@@ -19,11 +19,11 @@ def individualpersonPageView(request):
 
 
 def displayPersonPageView(request, id) :
-    oPerson = Student.objects.get(id=id)   
+    person = Student.objects.get(id=id)   
     context = {
-            "data" : student
+            "data" : person
     }
-    return render(request, 'travelpages/displayStudent.html', context)
+    return render(request, 'mpapp/displayPerson.html', context)
 
 
 =======
