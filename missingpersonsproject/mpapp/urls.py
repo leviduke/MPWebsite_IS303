@@ -11,8 +11,8 @@ from .views import displayPersonPageView
 
 
 urlpatterns = [  
-    path("<int:id>/", individualpersonPageView, 
-name="individualperson"), 
+    path("<int:id>/", displayPersonPageView, 
+name="displayPerson"), 
     path("missingpersonstable/", missingpersonstablePageView, name="mptable"), 
     path("<str:oPerson>/", individualpersonPageView, name="individualperson"), 
     path("", indexPageView, name="index"),
