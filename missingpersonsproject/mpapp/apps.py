@@ -1,12 +1,11 @@
 from django.apps import AppConfig
 from django.urls import path
-from .views import indexPageView, missingpersonstable.html,
-individualpersonpageview
+from .views import indexPageView, missingpersonstablePageView, individualpersonPageView, displayPersonPageView
+
 
 urlpatterns = [  
-    path("individualperson/", individualpersonPageView, 
-name="idnividualperson"), 
-    path("<str:oPerson>/", missingpersonPageView, name="mptable"), 
+    path("individualperson/", individualpersonPageView, name="idnividualperson"), 
+    path("<str:oPerson>/", missingpersonstablePageView, name="mptable"), 
     path("", indexPageView, name="index"),
 ] 
 

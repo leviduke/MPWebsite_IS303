@@ -3,29 +3,22 @@ from django.http import HttpResponse
 
 # Create your views here.
 def indexPageView(request):
-<<<<<<< HEAD
     return render(request, 'mpapp/index.html')
 
 def missingpersonstablePageView(request):
     return render(request, 'mpapp/missingpersonstable.html')
 
-def individualpersonPageView(request):
-   db_person = Person.objects.all() 
-    context = {
+def individualpersonPageView(request, id):
+   db_person = oPerson.objects.all() 
+   context = {
             "data" : db_person
     }
-
-    return render(request, 'mpapp/individualperson.html', context)
+   return render(request, 'mpapp/individualperson.html', context)
 
 
 def displayPersonPageView(request, id) :
-    person = Student.objects.get(id=id)   
+    person = oPersons.objects.get(id=id)   
     context = {
             "data" : person
     }
     return render(request, 'mpapp/displayPerson.html', context)
-
-
-=======
-    return render(request, 'mpapp/index.html')
->>>>>>> origin/master

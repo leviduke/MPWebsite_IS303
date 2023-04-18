@@ -36,8 +36,7 @@
                 <td>{{ oPerson.state }}</td>
                 <td>{{ oPerson.gender }}</td>
                 <td>{{ oPerson.race }}</td>
-                <td ><a href="{% url 'displayPerson' id=oPerson.id 
-%}">Details</a></td>   
+                <td ><a href="{% url 'displayPerson' id=oPerson.id %}">Details</a></td>   
                                          
             </tr>
             {% endfor %} 

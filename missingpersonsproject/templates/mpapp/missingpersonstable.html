@@ -21,6 +21,7 @@
           <th title="Field #6">State</th>
           <th title="Field #7">Gender</th>
           <th title="Field #8">Race</th>
+          <th></th>
         </tr>
       </thead>
       {% for oPerson in data %}
@@ -34,6 +35,7 @@
           <td>{{ oPerson.state }}</td>
           <td>{{ oPerson.gender }}</td>
           <td>{{ oPerson.race }}</td>
+          <td><a href = "{% url 'displayPerson' id=oPerson.id %}"> Details</a></td>
         </tr>
         {% endfor %}
     
