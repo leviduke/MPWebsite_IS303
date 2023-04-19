@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends './base.html' %}
 
-    {% block 'persons_table'%}
-    <h2 style="text-align: center; padding: 3rem; background-color: #000080; color: #fff;">Missing Persons Cases and Info</h2>
+    {% block persons_table %}
     <table class="table table-bordered table-hover table-condensed">
       <thead>
         <tr>
@@ -24,20 +15,21 @@
           <th></th>
         </tr>
       </thead>
-      {% for oPerson in data %}
       <tbody>
+      {% for Person in data %}
         <tr>
-          <td>{{ oPerson.date_missing }}</td>
-          <td>{{ oPerson.last_name }}</td>
-          <td>{{ oPerson.first_name }}</td>
-          <td align="right">{{ oPerson.age_when_missing }}</td>
-          <td>{{ oPerson.city }}</td>
-          <td>{{ oPerson.state }}</td>
-          <td>{{ oPerson.gender }}</td>
-          <td>{{ oPerson.race }}</td>
-          <td><a href = "{% url 'displayPerson' id=oPerson.id %}"> Details</a></td>
+          <td>{{ Person.date_missing }}</td>
+          <td>{{ Person.last_name }}</td>
+          <td>{{ Person.first_name }}</td>
+          <td align="right">{{ Person.age_when_missing }}</td>
+          <td>{{ Person.place.first.city }}</td>
+          <td>{{ Person.place.first.state }}</td>
+          <td>{{ Person.gender }}</td>
+          <td>{{ Person.race }}</td>
+          <td><a style = "text-align: center; background-color: darkblue; padding: .5rem; border-radius: 5px; text-decoration: none; font-family: Arial, Helvetica, sans-serif; font-size: .9rem; color: white; margin: .5rem;"href = "{% url 'displayPerson' id=Person.id %}"> Details</a></td>
         </tr>
         {% endfor %}
+      </tbody>
     
     {% endblock %}
 </body>

@@ -1,15 +1,23 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.db import models
+from .models import Person
+
 
 # Create your views here.
 def indexPageView(request):
     return render(request, 'mpapp/index.html')
 
 def missingpersonstablePageView(request):
-    return render(request, 'mpapp/missingpersonstable.html')
+    db_person = Person.objects.all() 
+    print("Data fetched from database: ", db_person)  # Add this line
+    context = {
+        "data" : db_person
+    }
+    return render(request, 'mpapp/missingpersonstable.html', context)
 
 def individualpersonPageView(request, id):
-   db_person = oPerson.objects.all() 
+   db_person = Person.objects.all() 
    context = {
             "data" : db_person
     }
@@ -17,8 +25,8 @@ def individualpersonPageView(request, id):
 
 
 def displayPersonPageView(request, id) :
-    person = oPersons.objects.get(id=id)   
+    missingperson = Person.objects.get(id=id)   
     context = {
-            "data" : person
+            "data" : missingperson
     }
     return render(request, 'mpapp/displayPerson.html', context)

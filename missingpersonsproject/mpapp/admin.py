@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import place, person
+from .models import Place, Person
 
 # Register your models here.
-admin.site.register(person)
-admin.site.register(place)
+admin.site.register(Person)
+admin.site.register(Place)

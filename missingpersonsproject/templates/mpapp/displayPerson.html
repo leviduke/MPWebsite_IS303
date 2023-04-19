@@ -1,7 +1,9 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block 'individual_person' %}
-        <p>Actively Missing Person</p>
+
+    {% extends './base.html' %}
+    {% comment %} {% load static %} {% endcomment %}
+    {% block individual_person %}
+    <div style = "display: flex; position: relative; justify-content: center; flex-direction: column; align-items: center; width: 100%;">
+        <p style="font-size: 2rem;" >Actively Missing Person</p>
         <form>
             <label>First Name</label>
             <input type="text" value="{{data.first_name}}">
@@ -9,4 +11,7 @@
             <label>Last Name</label>
             <input type="text" value="{{data.last_name}}">            
         </form>    
-{% endblock %}
+    </div>
+    {% endblock %}
+
+

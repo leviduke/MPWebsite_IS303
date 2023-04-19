@@ -1,7 +1,7 @@
 <!--Edited by Levi Duke 3/29/2023-->
 {% extends './base.html' %}
 {% block index %}
-  <h2 style="text-align: center; padding: 1.5rem;">Info and How to Help</h2>
+  <h2 style="text-align: center; padding: 1.5rem;">How to Help</h2>
 
 
   <p style="margin-left: 6rem; margin-right: 6rem; margin-top: 3rem; color: #203354; font-family: Arial, Helvetica, sans-serif; font-size: 1.3rem;">
@@ -37,7 +37,8 @@ Sex trafficking is a problem that can affect anyone, anywhere. If you travel, be
 Survivors of sex trafficking may need a variety of support services, including medical care, counseling, and legal assistance. You can support survivors by volunteering at shelters or local organizations that provide these services. If you can't volunteer, you can still support survivors by advocating for policies and programs that help survivors rebuild their lives.
 
 </p>
-
-<a style = "position: center; font-family: Arial, Helvetica, sans-serif; font-size: 1.3rem; color: blue; margin: 300px; " href="{% url 'mptable' %}">See Missing Persons</a>
+<div style = "display: flex; position: relative; justify-content: center; align-items: center; width: 100%;">
+  <a style = "text-align: center; background-color: darkblue; padding: 1rem; border-radius: 5px; text-decoration: none; font-family: Arial, Helvetica, sans-serif; font-size: 1.3rem; color: white; margin: 3rem;" href="{% url 'mptable' %}">See Missing Persons</a>
+</div>
 
 {%endblock%}
